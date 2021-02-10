@@ -1,0 +1,18 @@
+body {
+	margin: -5px;
+	overflow-x: hidden;
+}
+
+.layout__header-vid {
+	/*margin: -10px;*/
+	height: 110vh;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+.layout__header-text {
+	position: absolute;
+	top: 12vh;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
