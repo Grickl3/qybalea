@@ -1,16 +1,16 @@
 @font-face {
 	font-family: 'TT Bluescreens';
-	src: url('TT Bluescreens Medium.otf') format('otf');
+	src: url('./styles/TT-Bluescreens-Medium.woff') format('woff');
 }
 
 @font-face {
 	font-family: 'SecretaryTypewriter';
-	src: url('SecretaryTypewriter_Jumpy.otf') format('otf');
+	src: url('./styles/SecretaryTypewriter_Jumpy.otf') format('otf');
 }
 
 
 .brand__h1 {
-	font-family: 'TT Bluescreens';
+	font-family: 'TT Bluescreens', Helvetica, sans-serif;
 	font-size: 30rem;
 	color: white;
 	opacity: .5;
@@ -22,7 +22,7 @@
 	margin-left: 50%;
 	transform: translateX(-50%);
 
-	font-family: 'SecretaryTypewriter';
+	font-family: 'SecretaryTypewriter', monospace;
 	font-size: 3rem;
 	color: white;
 }
