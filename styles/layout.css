@@ -12,7 +12,9 @@ body {
 
 .layout__header-text {
 	position: absolute;
-	top: 12vh;
+	top: 30vh;
 	margin-left: 50%;
 	transform: translateX(-50%);
+	width: 90vw;
+	opacity: .5;
 }
