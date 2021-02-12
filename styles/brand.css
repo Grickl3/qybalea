@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
 	font-family: 'TT Bluescreens';
 	src: url('./styles/TTBluescreens-Medium.woff') format('woff');
 }
@@ -6,10 +6,10 @@
 @font-face {
 	font-family: 'SecretaryTypewriter';
 	src: url('./styles/SecretaryTypewriter_Jumpy.otf') format('otf');
-}
+}*/
 
 
-.brand__h1 {
+/*.brand__h1 {
 	font-family: 'TT Bluescreens', Helvetica, sans-serif;
 	font-size: 30rem;
 	color: white;
@@ -25,4 +25,4 @@
 	font-family: 'SecretaryTypewriter', monospace;
 	font-size: 3rem;
 	color: white;
-}
+}*/
