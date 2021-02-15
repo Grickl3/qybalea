@@ -48,6 +48,7 @@ h4 {
 }
 
 p,li {
+	max-width: 85vw;
 	font-family: 'Cutive Mono', monospace;
 	font-size: 1.4rem;
 	color: #f0f4ef;

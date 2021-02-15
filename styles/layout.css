@@ -22,9 +22,14 @@ body {
 
 #sign-up-box-1 {
 	position: absolute;
-	top: 85vh;
-	margin-left: 50%;
-	transform: translateX(-50%);
+	right: 10vw;
+	top: 70vh;
+}
+
+@media (min-width: 900px) {
+	#sign-up-box-1 {
+		top: 85vh;
+	}
 }
 
 .layout__main-content__area {

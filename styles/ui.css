@@ -2,25 +2,37 @@
 .ui__CTA-button__box {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
 	margin: 4rem 0;
 }
 
 .ui__CTA-button__button {
-	margin: 0 3rem 0 0;
+	margin: 1.5rem 3rem;
 	padding: .75rem 1rem 1rem 1.2rem;
 	background-color: #bfcc94;
 	border-radius: 13px;
+	box-shadow: 3px 3px 12px #0d1821;
 }
 
 	.ui__CTA-button__button:hover {
 		background-color: #60664a;
 		cursor: pointer;
+		box-shadow: 1px 1px 4px #0d1821;
 	}
 
 .ui__CTA__copy {
 	font-family: 'Six Caps', Helvetica, sans-serif; 
-	font-size: 3rem;
+	font-size: 1.75rem;
 	font-weight: 300;
-	letter-spacing: .5rem;
+	letter-spacing: .25rem;
 	color: #0d1821;
+}
+
+@media (min-width: 900px) {
+	.ui__CTA__copy {
+		font-size: 3rem;
+	}
 }
