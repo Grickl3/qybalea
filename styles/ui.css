@@ -1,4 +1,26 @@
 
-.ui__calendar-link__button {}
+.ui__CTA-button__box {
+	display: flex;
+	flex-direction: row;
+	margin: 4rem 0;
+}
 
-.ui__calendar-link__copy {}
+.ui__CTA-button__button {
+	margin: 0 3rem 0 0;
+	padding: .75rem 1rem 1rem 1.2rem;
+	background-color: #bfcc94;
+	border-radius: 13px;
+}
+
+	.ui__CTA-button__button:hover {
+		background-color: #60664a;
+		cursor: pointer;
+	}
+
+.ui__CTA__copy {
+	font-family: 'Six Caps', Helvetica, sans-serif; 
+	font-size: 3rem;
+	font-weight: 300;
+	letter-spacing: .5rem;
+	color: #0d1821;
+}
