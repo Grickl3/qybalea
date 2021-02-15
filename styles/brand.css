@@ -1,28 +1,19 @@
-/*@font-face {
-	font-family: 'TT Bluescreens';
-	src: url('./styles/TTBluescreens-Medium.woff') format('woff');
-}
 
-@font-face {
-	font-family: 'SecretaryTypewriter';
-	src: url('./styles/SecretaryTypewriter_Jumpy.otf') format('otf');
-}*/
-
-
-/*.brand__h1 {
-	font-family: 'TT Bluescreens', Helvetica, sans-serif;
-	font-size: 30rem;
-	color: white;
-	opacity: .5;
-}
 
 .brand__teaser {
 	position: absolute;
-	top: 24vh;
+	top: 15vh;
 	margin-left: 50%;
 	transform: translateX(-50%);
 
-	font-family: 'SecretaryTypewriter', monospace;
+	font-family: 'Cutive Mono', monospace;
 	font-size: 3rem;
-	color: white;
-}*/
+	color: #f0f4ef;
+}
+
+p {
+	font-family: 'Cutive Mono', monospace;
+	font-size: 1.2rem;
+	color: #f0f4ef;
+}
+
