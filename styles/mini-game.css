@@ -9,7 +9,15 @@
 	flex-direction: row;
 }
 
-.mini-game-layout__add-player__field {}
+.mini-game-layout__add-player__field {
+	font-family: 'Six Caps', Helvetica, sans-serif; 
+	font-size: 3rem;
+	font-weight: 300;
+	letter-spacing: .25rem;
+	color: #344966;
+	text-align: center;
+	border-radius: .5rem;
+}
 
 .mini-game-layout__add-player__button {
 	margin: 1rem;

@@ -16,28 +16,157 @@
 }
 .concentration-layout__left-column__box {
 	flex-grow: 1;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
 }
 .concentration-layou__copy__general { display: block; }
 
-.concentration-layout__pot__label {}
+.concentration-layout__label {
+	font-family: 'Cutive Mono', monospace;
+	font-size: 1.4rem;
+	color: #f0f4ef;
+}
 
-.concentration-layout__pot__count {}
+.concentration-layout__pot__count {
+	font-family: 'Six Caps', Helvetica, sans-serif; 
+	font-size: 5rem;
+	font-weight: 300;
+	letter-spacing: .25rem;
+	color: #b4cded;
+	text-align: center;
+}
+
+.concentration-layout__clear {
+	/*align-self: flex-end;*/
+	max-height: 3rem;
+	background-color: #b4cded;
+}
+	.concentration-layout__clear:hover {
+		background-color: #4a6fa1;
+		cursor: pointer;
+	}
 
 .concentration-layout__center-column__box {
 	flex-grow: 2;
 }
 
-.concentration-layout__subject-n-player__box {}
+.concentration-layout__mid-top__box {
+	display: flex;
+	flex-direction: row;
+}
 
-.concentration-layout__subject__label {}
+.concentration-layout__mid-top-right__box {
+	display: flex;
+	flex-direction: column;
+}
 
-.concentration-layout__subject {}
+.concentration-layout__subject-selector__box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
 
-.concentration-layout__player__label {}
+.concentration-layout__subject-n-player__box {
+	flex-grow: 2;
+}
 
-.concentration-layout__player {}
+.concentration-layout__subject {
+	font-family: 'Six Caps', Helvetica, sans-serif; 
+	font-size: 7rem;
+	font-weight: 300;
+	letter-spacing: .25rem;
+	color: #b4cded;
+}
 
-.concentration-layout__time-bar {}
+.concentration-layout__player {
+	font-family: Helvetica, sans-serif; 
+	font-size: 3rem;
+	font-weight: 700;
+	letter-spacing: .25rem;
+	color: #b4cded;
+}
+
+.concentration-layout__go {
+	height: 1.5rem;
+	width: 1.5rem;
+	margin: .25rem;
+	border-radius: .75rem;
+}
+	.concentration-layout__go:hover {
+		cursor: pointer;
+	}
+	
+.concentration-layout__go-easy {
+	background-color: #bfcc94;
+}
+	.concentration-layout__go-easy:hover {
+		background-color: #6f8037;
+	}
+
+.concentration-layout__go-med {
+	background-color: #ccc394;
+}
+	.concentration-layout__go-med:hover {
+		background-color: #807537;
+	}
+
+.concentration-layout__go-hard {
+	background-color: #cca295;
+}
+	.concentration-layout__go-hard:hover {
+		background-color: #804837;
+	}
+
+.concentration-layout__time-bar {
+	flex-grow: 2;
+	margin: .5rem 0;
+	/*padding: 1rem;*/
+	border: 1px solid #b4cded;
+	border-radius: .5rem;
+	text-align: center;
+}
+
+.concentration-layout__shrinking-bar {
+	/*transform: translateY(-82%);*/
+	position: static;
+	width: 100%;
+	height: 100%;
+	border-radius: .5rem;
+	background-color: #b4cded;
+}
+
+.concentration-layout__countdown-init {
+	animation: countdown 6s linear forwards;
+}
+
+	@keyframes countdown {
+		0% {
+			background-color: #b4cded;
+		}
+
+		99% {
+			background-color: #0d1821;
+		}
+
+		100% {
+			background-color: #804837;
+		}
+	}
+
+.concentration-layout__current-letter {
+	display: block;
+	position: static;
+	margin-left: auto;
+
+	font-family: 'Six Caps', Helvetica, sans-serif; 
+	font-size: 8rem;
+	font-weight: 500;
+	color: #0d1821;
+}
 
 .concentration-layout__turn-controls__box {
 	display: flex;
@@ -50,7 +179,7 @@
 	flex-grow: 1;
 	height: 3rem;
 	margin: 1rem;
-	padding: .5rem;
+	padding: .2rem 1rem 1.5rem 1rem;
 	border-radius: 2rem;
 	text-align: center;
 }
@@ -71,9 +200,36 @@
 		cursor: pointer;
 	}
 
+.concentration-layout__turn-button__copy {
+	font-family: 'Six Caps', Helvetica, sans-serif; 
+	font-size: 3rem;
+	font-weight: 300;
+	letter-spacing: .25rem;
+	color: #0d1821;
+}
 
 .concentration-layout__right-column__box {
 	flex-grow: 1;
 }
 
-.concentration-layout__active-players__box {}
+.concentration-layout__active-players__box {
+	margin: 2rem 0;
+}
+
+.concentration-layout__active-player__listing {
+	margin: .5rem 0;
+	font-family: Helvetica, sans-serif; 
+	font-size: 1.2rem;
+	font-weight: 500;
+	/*letter-spacing: .5rem;*/
+	color: #b4cded;
+}
+
+.concentration-layout__active-player__name { color: white; }
+
+
+
+
+
+
+

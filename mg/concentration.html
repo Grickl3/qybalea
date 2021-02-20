@@ -27,6 +27,8 @@
 		<meta name="msapplication-TileColor" content="#d49a00">
 		<meta name="theme-color" content="#ffffff">
 	<!-- FAVICON -->
+
+	<script type="text/javascript" src="../scripts/concentration.js"></script>
 </head>
 <body>
 	
@@ -37,36 +39,57 @@
 	<div class="concentration-layout__main-box__box">
 		
 		<div class="concentration-layout__column__box concentration-layout__left-column__box">
-			<span class="concentration-layout__pot__label concentration-layou__copy__general">pot</span>
-			<span id="pot-count" class="concentration-layout__pot__count concentration-layou__copy__general">0</span>
+			<div>
+				<span class="concentration-layout__label concentration-layou__copy__general">pot</span>
+				<span id="pot-count" class="concentration-layout__pot__count concentration-layou__copy__general">0</span>
+			</div>
+
+			<div id="clear" class="concentration-layout__turn-controls concentration-layout__clear">
+				<span class="concentration-layout__turn-button__copy">clear</span>
+			</div><!-- CLEAR BUTTON -->
 		</div><!-- LEFT COLUMN -->
 
 		<div class="concentration-layout__column__box concentration-layout__center-column__box">
-			<div>
+			<div class="concentration-layout__mid-top__box">
 				<div class="concentration-layout__subject-n-player__box">
-					<span class="concentration-layout__subject__label concentration-layou__copy__general">subject</span>
+					<span class="concentration-layout__label concentration-layou__copy__general">subject</span>
 					<span id="subject" class="concentration-layout__subject concentration-layou__copy__general">— — —</span>
-					<span class="concentration-layout__player__label concentration-layou__copy__general">player</span>
+					<span class="concentration-layout__label concentration-layou__copy__general">player</span>
 					<span id="player" class="concentration-layout__player concentration-layou__copy__general">— — —</span>
 				</div><!-- SUBJECT & PLAYER TURN -->
 
-				<div class="concentration-layout__time-bar"></div><!-- TIME BAR -->
+				<div class="concentration-layout__mid-top-right__box">
+					<div class="concentration-layout__subject-selector__box">
+						<div id="easy" class="concentration-layout__go-easy concentration-layout__go"></div><!-- EASY -->
+
+						<div id="med" class="concentration-layout__go-med concentration-layout__go"></div><!-- MED -->
+
+						<div id="hard" class="concentration-layout__go-hard concentration-layout__go"></div><!-- HARD -->
+					</div>
+					<div class="concentration-layout__time-bar">
+						
+						<div id="countdown" class="concentration-layout__shrinking-bar">
+							<span id="current-letter" class="concentration-layout__current-letter">A</span>
+						</div>
+						
+					</div><!-- TIME BAR -->
+				</div>
 			</div><!-- TOP BOX IN MIDDLE -->
 			
 			<div class="concentration-layout__turn-controls__box">
 				<div id="next-btn" class="concentration-layout__next-button concentration-layout__turn-controls">
-					<span>next</span>
+					<span class="concentration-layout__turn-button__copy">next</span>
 				</div><!-- NEXT BUTTON -->
 				<div id="out-btn" class="concentration-layout__out-button concentration-layout__turn-controls">
-					<span>out</span>
+					<span class="concentration-layout__turn-button__copy">out</span>
 				</div><!-- NEXT BUTTON -->
 			</div><!-- TURN CONTROLS -->
 		</div><!-- CENTER COLUMN -->
 
 		<div class="concentration-layout__column__box concentration-layout__right-column__box">
 			<div class="mini-game__add-player__box">
-				<input class="mini-game-layout__add-player__field" type="text" name="add player" placeholder="add player">
-				<div class="mini-game-layout__add-player__button">
+				<input id="player-input" class="mini-game-layout__add-player__field" type="text" name="add player" placeholder="add player">
+				<div id="add-player-button" class="mini-game-layout__add-player__button">
 					<div class="mini-game__add-player__bar mini-game__add-player__vert"></div>
 					<div class="mini-game__add-player__bar mini-game__add-player__hrz"></div>
 				</div><!-- ADD PLAYER BUTTON -->
@@ -79,4 +102,88 @@
 	</div><!-- MAIN BOX -->
 
 
+<script type="text/javascript">
+	
+	// ADD PLAYERS
+
+		const playerInput = document.getElementById("player-input");
+		const addPlayerButton = document.getElementById("add-player-button");
+		const activePlayers = document.getElementById("active-players");
+
+		addPlayerButton.addEventListener('click', function() {
+			processPlayer();
+		});
+
+		document.addEventListener('keydown', function() {
+		    if(event.keyCode == 13) {
+		        processPlayer();
+		    }
+		});
+
+	// SUBJECT CONTROL
+
+		const subject = document.getElementById("subject");
+		const player = document.getElementById("player");
+		const easy = document.getElementById("easy");
+		const med = document.getElementById("med");
+		const hard = document.getElementById("hard");
+
+		easy.addEventListener("click", function() {
+			grabEasy();
+			let difficult = false;
+			// console.log(difficult);
+		});
+
+		med.addEventListener("click", function() {
+			grabMed();
+			let difficult = false;
+			// console.log(difficult);
+		});
+
+		hard.addEventListener("click", function() {
+			grabHard();
+			let difficult = true;
+			// console.log(difficult);
+		});
+
+	// CONTROLS
+		const potCount = document.getElementById("pot-count");
+		const nextButton = document.getElementById("next-btn");
+		const outButton = document.getElementById("out-btn");
+		const clear = document.getElementById("clear");
+		const countdown = document.getElementById("countdown");
+		const currentLetter = document.getElementById("current-letter");
+		
+		nextButton.addEventListener("click", function() {
+			nextTurn();
+			countdown.classList.remove("concentration-layout__countdown-init");
+			void countdown.offsetWidth;
+			countdown.classList.add("concentration-layout__countdown-init");
+		});
+
+		outButton.addEventListener("click", function() {
+			youreOut();
+		})
+
+		clear.addEventListener("click", function() {
+			resetPot();
+		})
+
+
+</script>
+
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
