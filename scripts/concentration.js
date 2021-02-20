@@ -49,16 +49,20 @@ pot = 0;
 			"vehicles",
 			"occupations",
 			"quadrupeds",
-			"fairy tale characters",
+			"fairy tale stuffs",
 			"fold-able",
 			"garments",
 			"pairs with chocolate",
 			"cannot fly",
 			"usually wet",
-			"song titles",
 			"rhymes with shun",
 			"smells bad",
-			"heroes"
+			"heroes",
+			"bigger than a bread box",
+			"fits in a bread box",
+			"periodicals",
+			"measurements",
+			"electronics"
 		];
 
 		const mediumSubjects = [
@@ -76,7 +80,10 @@ pot = 0;
 			"crimes",
 			"historical events",
 			"sharpen things",
-			"fasteners"
+			"fasteners",
+			"song titles",
+			"footwear",
+			"spotted"
 		];
 
 		const hardSubjects = [
@@ -140,6 +147,7 @@ pot = 0;
 	let nextTurn = function() {
 		if (playerCycle < roster.length) {
 			// console.log(playerCycle);
+			// playerCycle += 1;
 			player.innerText = roster[playerCycle].name;
 			playerCycle += 1;
 			rotateLetters();
@@ -149,6 +157,7 @@ pot = 0;
 			playerCycle = 0;
 			// console.log(playerCycle);
 			player.innerText = roster[playerCycle].name;
+			playerCycle += 1;
 			rotateLetters();
 		}
 	}
