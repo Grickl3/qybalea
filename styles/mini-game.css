@@ -1,0 +1,43 @@
+ 
+
+.mini-game__top-box__box {}
+
+.mini-game__header {}
+
+.mini-game__add-player__box {
+	display: flex;
+	flex-direction: row;
+}
+
+.mini-game-layout__add-player__field {}
+
+.mini-game-layout__add-player__button {
+	margin: 1rem;
+	padding: .25rem;
+	height: 2.5rem;
+	width: 2.5rem;
+	background-color: #bfcc94;
+	border: .25rem solid #f0f4ef; 
+}
+	.mini-game-layout__add-player__button:hover {
+		cursor: pointer;
+		background-color: #6f8037;
+	}
+
+.mini-game__add-player__bar {
+	position: relative;
+	height: .5rem;
+	width: 2rem;
+	background-color: #f0f4ef;
+}
+
+.mini-game__add-player__vert {
+	top: 1rem;
+	left: .25rem;
+	transform: rotate(90deg);
+}
+
+.mini-game__add-player__hrz {
+	top: .5rem;
+	left: .25rem;
+}

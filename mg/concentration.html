@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>concentration</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="In this mini-game, contestants must think of examples of the focal thing which begin with each successive letter of the alphabet. This game emphasizes lateral thinking and focus on a single subject. It has been adapted from the exercise common to Odyssey of the Mind.">
+	<meta name="keywords" content="odyssey of the mind, concentration, focus training, lateral thinking, social gaming, mental clarity, clear your mind">
+	<meta name="author" content="SQGLZ">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="../styles/brand.css">
+	<link rel="stylesheet" type="text/css" href="../styles/ui.css">
+	<link rel="stylesheet" type="text/css" href="../styles/layout.css">
+	<link rel="stylesheet" type="text/css" href="../styles/concentration-layout.css">
+	<link rel="stylesheet" type="text/css" href="../styles/mini-game.css">
+
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Six+Caps&display=swap" rel="stylesheet">
+
+	<!-- FAVICON -->
+		<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+		<link rel="manifest" href="../site.webmanifest">
+		<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#d49a00">
+		<meta name="msapplication-TileColor" content="#d49a00">
+		<meta name="theme-color" content="#ffffff">
+	<!-- FAVICON -->
+</head>
+<body>
+	
+	<div class="mini-game__top-box__box">
+		<h1 class="mini-game__header">Concentration</h1>
+	</div><!-- TOP BOX -->
+
+	<div class="concentration-layout__main-box__box">
+		
+		<div class="concentration-layout__column__box concentration-layout__left-column__box">
+			<span class="concentration-layout__pot__label concentration-layou__copy__general">pot</span>
+			<span id="pot-count" class="concentration-layout__pot__count concentration-layou__copy__general">0</span>
+		</div><!-- LEFT COLUMN -->
+
+		<div class="concentration-layout__column__box concentration-layout__center-column__box">
+			<div>
+				<div class="concentration-layout__subject-n-player__box">
+					<span class="concentration-layout__subject__label concentration-layou__copy__general">subject</span>
+					<span id="subject" class="concentration-layout__subject concentration-layou__copy__general">— — —</span>
+					<span class="concentration-layout__player__label concentration-layou__copy__general">player</span>
+					<span id="player" class="concentration-layout__player concentration-layou__copy__general">— — —</span>
+				</div><!-- SUBJECT & PLAYER TURN -->
+
+				<div class="concentration-layout__time-bar"></div><!-- TIME BAR -->
+			</div><!-- TOP BOX IN MIDDLE -->
+			
+			<div class="concentration-layout__turn-controls__box">
+				<div id="next-btn" class="concentration-layout__next-button concentration-layout__turn-controls">
+					<span>next</span>
+				</div><!-- NEXT BUTTON -->
+				<div id="out-btn" class="concentration-layout__out-button concentration-layout__turn-controls">
+					<span>out</span>
+				</div><!-- NEXT BUTTON -->
+			</div><!-- TURN CONTROLS -->
+		</div><!-- CENTER COLUMN -->
+
+		<div class="concentration-layout__column__box concentration-layout__right-column__box">
+			<div class="mini-game__add-player__box">
+				<input class="mini-game-layout__add-player__field" type="text" name="add player" placeholder="add player">
+				<div class="mini-game-layout__add-player__button">
+					<div class="mini-game__add-player__bar mini-game__add-player__vert"></div>
+					<div class="mini-game__add-player__bar mini-game__add-player__hrz"></div>
+				</div><!-- ADD PLAYER BUTTON -->
+			</div><!-- ADD PLAYER BOX -->
+
+			<div id="active-players" class="concentration-layout__active-players__box">
+			</div><!-- ACTIVE PLAYERS -->	
+		</div><!-- RIGHT COLUMN -->
+
+	</div><!-- MAIN BOX -->
+
+
+</body>

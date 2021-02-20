@@ -1,0 +1,79 @@
+ 
+
+
+.concentration-layout__main-box__box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 2rem;
+}
+
+.concentration-layout__column__box {
+	margin: 1rem;
+	padding: 1.5rem;
+	border-radius: .75rem;
+	background-color: #344966;
+}
+.concentration-layout__left-column__box {
+	flex-grow: 1;
+}
+.concentration-layou__copy__general { display: block; }
+
+.concentration-layout__pot__label {}
+
+.concentration-layout__pot__count {}
+
+.concentration-layout__center-column__box {
+	flex-grow: 2;
+}
+
+.concentration-layout__subject-n-player__box {}
+
+.concentration-layout__subject__label {}
+
+.concentration-layout__subject {}
+
+.concentration-layout__player__label {}
+
+.concentration-layout__player {}
+
+.concentration-layout__time-bar {}
+
+.concentration-layout__turn-controls__box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 2rem;
+}
+
+.concentration-layout__turn-controls {
+	flex-grow: 1;
+	height: 3rem;
+	margin: 1rem;
+	padding: .5rem;
+	border-radius: 2rem;
+	text-align: center;
+}
+
+.concentration-layout__next-button {
+	background-color: #bfcc94;
+}
+	.concentration-layout__next-button:hover {
+		background-color: #6f8037;
+		cursor: pointer;
+	}
+
+.concentration-layout__out-button {
+	background-color: #cca295;
+}
+	.concentration-layout__out-button:hover {
+		background-color: #804837;
+		cursor: pointer;
+	}
+
+
+.concentration-layout__right-column__box {
+	flex-grow: 1;
+}
+
+.concentration-layout__active-players__box {}
