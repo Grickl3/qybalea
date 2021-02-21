@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>mental grit</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Plato believed that a mind which was reliable in calculation would be fitter for all other purposes for possessing this attribute. This game is tests and improves our mental endurance, the cognitive equivalent of Cross Fit, but not quite as fun. This ain’t Candy Crush folks.">
+	<meta name="keywords" content="odyssey of the mind, concentration, focus training, mental endurance, cognitive strength, intellectual exercise, mental clarity, clear your mind">
+	<meta name="author" content="SQGLZ">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="../styles/brand.css">
+	<link rel="stylesheet" type="text/css" href="../styles/ui.css">
+	<link rel="stylesheet" type="text/css" href="../styles/layout.css">
+	<link rel="stylesheet" type="text/css" href="../styles/concentration-layout.css">
+	<link rel="stylesheet" type="text/css" href="../styles/mini-game.css">
+	<link rel="stylesheet" type="text/css" href="../styles/grit-layout.css">
+
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Six+Caps&display=swap" rel="stylesheet">
+
+	<!-- FAVICON -->
+		<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+		<link rel="manifest" href="../site.webmanifest">
+		<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#d49a00">
+		<meta name="msapplication-TileColor" content="#d49a00">
+		<meta name="theme-color" content="#ffffff">
+	<!-- FAVICON -->
+
+	<script type="text/javascript" src="../scripts/grit.js"></script>
+	<script type="text/javascript" src="../scripts/concentration.js"></script>
+</head>
+<body>
+	
+	<div class="mini-game__top-box__box">
+		<h1 class="mini-game__header">Mental Grit</h1>
+	</div><!-- TOP BOX -->
+
+	<div id="player-box" class="grit__player__box grit__player__box-closed">
+			<div id="player-handle" class="grit__player__handle">
+				
+			</div><!-- HANDLE -->
+			<div class="grit__player__drawer">
+				<div class="mini-game__add-player__box grit-player-box">
+					<input id="player-input" class="mini-game-layout__add-player__field" type="text" name="add player" placeholder="add player">
+					<div id="add-player-button" class="mini-game-layout__add-player__button">
+						<div class="mini-game__add-player__bar mini-game__add-player__vert"></div>
+						<div class="mini-game__add-player__bar mini-game__add-player__hrz"></div>
+					</div><!-- ADD PLAYER BUTTON -->
+				</div><!-- ADD PLAYER BOX -->
+
+			<div id="active-players" class="concentration-layout__active-players__box grit-player-box">
+			</div><!-- ACTIVE PLAYERS -->
+			</div><!-- DRAWER -->
+		</div><!-- PLAYER BOX -->
+
+	<div class="grit__main-box">
+
+		<div class="grit__level-selector__box">
+			<input id="level-selector" class="grit__level-selector__slider" type="range" min="1" max="100" value="1">
+			<span id="level-count" class="grit__level-selector__count">1</span>
+		</div><!-- LEVEL SELECTOR --> 
+
+		<div class="grit__stage">
+			<div id="counter-ball" class="grit__counter-ball"></div><!-- COUNTER BALL -->
+			<div id="counter-display" class="grit__counter-display__box layout__hidden">
+				<span class="grit__counter-display__copy">null</span>
+			</div><!-- COUNTER DISPLAY -->
+		</div><!-- STAGE -->
+
+	</div><!-- MAIN BOX -->
+
+<script type="text/javascript">
+
+	// OPEN PLAYER DRAWER
+		const playerBox = document.getElementById("player-box");
+		const playerHandle = document.getElementById("player-handle");
+
+		playerHandle.addEventListener("click", function() {
+			playerBox.classList.toggle("grit__player__box-closed");
+		})
+
+	// ADD PLAYERS
+
+		const playerInput = document.getElementById("player-input");
+		const addPlayerButton = document.getElementById("add-player-button");
+		const activePlayers = document.getElementById("active-players");
+
+		addPlayerButton.addEventListener('click', function() {
+			processPlayer();
+		});
+
+		document.addEventListener('keydown', function() {
+		    if(event.keyCode == 13) {
+		        processPlayer();
+		    }
+		});
+	
+	// LEVEL SELECTION
+
+		const levelSelector = document.getElementById("level-selector");
+		const levelCount = document.getElementById("level-count");
+
+		levelSelector.addEventListener('input', function() {
+			levelCount.innerText = levelSelector.value;
+		})
+
+	// COUNT SWITCHES
+		const counterBall = document.getElementById("counter-ball");
+		const counterDisplay = document.getElementById("counter-display");
+
+		//COUNT
+		document.addEventListener("keydown", event => {
+		  if (event.isComposing || event.keyCode === 32) {
+		    console.log("space bar pressed");
+		    counterBall.style.display = 'block';
+		    counterBall.classList.add("grit__counting");
+		  }
+		});
+
+		document.addEventListener("keyup", event => {
+		  if (event.isComposing || event.keyCode === 32) {
+		    // void countdown.offsetWidth;
+		    console.log("space bar released");
+		    counterBall.classList.remove("grit__counting");
+		    counterBall.style.display = 'none';
+		  }
+		});
+
+
+		// REVEAL COUNT
+		document.addEventListener("keydown", event => {
+		  if (event.isComposing || event.keyCode === 13) {
+		    console.log("key pressed");
+		    counterDisplay.classList.remove("layout__hidden");
+		  }
+		});
+
+		document.addEventListener("keyup", event => {
+		  if (event.isComposing || event.keyCode === 13) {
+		    console.log("key released");
+		    counterDisplay.classList.add("layout__hidden");
+		  }
+		});
+
+
+</script>
+</body>
