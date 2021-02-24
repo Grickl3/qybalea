@@ -59,15 +59,23 @@
 	<div class="grit__main-box">
 
 		<div class="grit__level-selector__box">
-			<input id="level-selector" class="grit__level-selector__slider" type="range" min="1" max="100" value="1">
+			<input id="level-selector" class="grit__level-selector__slider" type="range" min="0" max="100" value="1">
 			<span id="level-count" class="grit__level-selector__count">1</span>
 		</div><!-- LEVEL SELECTOR --> 
 
 		<div class="grit__stage">
 			<div id="counter-ball" class="grit__counter-ball"></div><!-- COUNTER BALL -->
 			<div id="counter-display" class="grit__counter-display__box layout__hidden">
-				<span class="grit__counter-display__copy">null</span>
+				<span id="counter-print" class="grit__counter-display__copy">null</span>
 			</div><!-- COUNTER DISPLAY -->
+
+			<div id="start-button" class="concentration-layout__turn-controls grit__start-button">
+				<span class="concentration-layout__turn-button__copy">start</span>
+			</div><!-- START BUTTON -->
+
+			<div id="stop-button" class="concentration-layout__turn-controls grit__stop-button">
+				<span class="concentration-layout__turn-button__copy">stop</span>
+			</div><!-- START BUTTON -->
 		</div><!-- STAGE -->
 
 	</div><!-- MAIN BOX -->
@@ -107,44 +115,75 @@
 			levelCount.innerText = levelSelector.value;
 		})
 
-	// COUNT SWITCHES
+	// COUNT DISPLAYS
 		const counterBall = document.getElementById("counter-ball");
 		const counterDisplay = document.getElementById("counter-display");
+		const counterPrint = document.getElementById("counter-print");
 
-		//COUNT
-		document.addEventListener("keydown", event => {
-		  if (event.isComposing || event.keyCode === 32) {
-		    console.log("space bar pressed");
-		    counterBall.style.display = 'block';
-		    counterBall.classList.add("grit__counting");
-		  }
+		//COUNT v1
+			// const intervalId = window.setInterval(function(){
+			//   // console.log("hi.")
+			//   countOn();
+			// }, 3000);
+
+		// COUNT v2
+			document.addEventListener('keydown', function() {
+			    if(event.keyCode == 32) {
+			        // console.log("space bar pressed");
+					counterBall.style.display = 'block';
+					counterBall.classList.add("grit__counting");
+			    }
+			});
+
+			document.addEventListener('keyup', function() {
+			    if(event.keyCode == 32) {
+			        // console.log("space bar released");
+					counterBall.classList.remove("grit__counting");
+					counterBall.style.display = 'none';
+			    }
+			});
+		// REVEAL COUNT v2
+			document.addEventListener('keydown', function() {
+			    if(event.keyCode == 13) {
+			        // console.log("key pressed");
+			        counterDisplay.classList.remove("layout__hidden");
+			    }
+			});
+
+			document.addEventListener('keyup', function() {
+			    if(event.keyCode == 13) {
+			        // console.log("key released");
+			        counterDisplay.classList.add("layout__hidden");
+			    }
+			});
+
+	// START n STOP
+
+		let startTheCounting = window.setInterval(function(){
+			  countOn();
+			}, 3000);
+		clearInterval(startTheCounting);
+
+		const startButton = document.getElementById("start-button");
+		const stopButton = document.getElementById("stop-button");
+
+		startButton.addEventListener("click", function() {
+			let startTheCounting = window.setInterval(function(){
+			  countOn();
+			}, 3000);
 		});
 
-		document.addEventListener("keyup", event => {
-		  if (event.isComposing || event.keyCode === 32) {
-		    // void countdown.offsetWidth;
-		    console.log("space bar released");
-		    counterBall.classList.remove("grit__counting");
-		    counterBall.style.display = 'none';
-		  }
+		stopButton.addEventListener("click", function() {
+			clearInterval(startTheCounting);
+			console.log("STOP!");
 		});
-
-
-		// REVEAL COUNT
-		document.addEventListener("keydown", event => {
-		  if (event.isComposing || event.keyCode === 13) {
-		    console.log("key pressed");
-		    counterDisplay.classList.remove("layout__hidden");
-		  }
-		});
-
-		document.addEventListener("keyup", event => {
-		  if (event.isComposing || event.keyCode === 13) {
-		    console.log("key released");
-		    counterDisplay.classList.add("layout__hidden");
-		  }
-		});
-
 
 </script>
 </body>
+
+
+
+
+
+
+

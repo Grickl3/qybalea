@@ -55,7 +55,9 @@
 	}
 
 	.grit__level-selector__count {
+		display: inline-block;
 		margin: 3rem;
+		transform: translateY(20%);
 		font-family: 'Six Caps', Helvetica, sans-serif; 
 		font-size: 4rem;
 		font-weight: 300;
@@ -63,7 +65,7 @@
 		color: #b4cded;
 	}
 
-/* COUNTER BALL */
+/* COUNTERS */
 
 	.grit__stage {
 		margin: 3rem;
@@ -100,10 +102,11 @@
 	}
 
 	.grit__counter-display__box {
-
+		position: static;
 	}
 
 	.grit__counter-display__copy {
+		position: static;
 		/*margin: 3rem;*/
 		font-family: 'Six Caps', Helvetica, sans-serif; 
 		font-size: 4rem;
@@ -112,8 +115,23 @@
 		color: #b4cded;
 	}
 
+/* START BUTTON */
 
+	.grit__start-button {
+		background-color: #bfcc94;
+	}
+		.grit__start-button:hover {
+			background-color: #6f8037;
+			cursor: pointer;
+		}
 
+	.grit__stop-button {
+		background-color: #cca295;
+	}
+		.grit__stop-button:hover {
+			background-color: #804837;
+			cursor: pointer;
+		}
 
 
 
