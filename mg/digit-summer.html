@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>digit summmer</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="This is a super simple tool for practicing focus by counting by digit sum.">
+	<meta name="keywords" content="odyssey of the mind, concentration, focus training, mental endurance, cognitive strength, intellectual exercise, mental clarity, clear your mind">
+	<meta name="author" content="SQGLZ">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="../styles/brand.css">
+	<link rel="stylesheet" type="text/css" href="../styles/ui.css">
+	<link rel="stylesheet" type="text/css" href="../styles/layout.css">
+	<link rel="stylesheet" type="text/css" href="../styles/concentration-layout.css">
+	<link rel="stylesheet" type="text/css" href="../styles/mini-game.css">
+	<link rel="stylesheet" type="text/css" href="../styles/digits.css">
+
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Six+Caps&display=swap" rel="stylesheet">
+
+	<!-- FAVICON -->
+		<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+		<link rel="manifest" href="../site.webmanifest">
+		<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#d49a00">
+		<meta name="msapplication-TileColor" content="#d49a00">
+		<meta name="theme-color" content="#ffffff">
+	<!-- FAVICON -->
+
+	<script type="text/javascript" src="../scripts/grit.js"></script>
+	<script type="text/javascript" src="../scripts/digits.js"></script>
+</head>
+<body>
+	
+	<div class="digits__main-box">
+
+			<span id="feed" class="digits__feed"></span>
+
+			<span id="tally" class="digits__tally"></span>
+
+	</div><!-- MAIN BOX -->
+
+
+<script type="text/javascript">
+
+	const feed = document.getElementById("feed");
+	const tally = document.getElementById("tally");
+
+	document.addEventListener('keydown', function() {
+	    if(event.keyCode === 32) {
+	        advanceFeed();
+	    }
+	});
+	
+</script>
+</body>

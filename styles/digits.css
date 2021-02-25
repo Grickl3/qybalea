@@ -1,0 +1,45 @@
+
+
+
+body {
+	background-color: #0d1821;
+}
+
+.digits__main-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: 100vw;
+	height: 100vh;
+}
+
+/*.digits__inner-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+	margin: 6rem;
+
+	min-width: 4rem;
+	min-height: 4rem;
+}*/
+
+.digits__feed {
+	margin: 0 0 12rem 0;
+
+	font-family: Helvetica, sans-serif; 
+	font-size: 8rem;
+	font-weight: 500;
+	color: #f0f4ef;
+}
+
+.digits__tally {
+	font-family: Helvetica, sans-serif; 
+	font-size: 5rem;
+	font-weight: 500;
+	color: #b4cded;
+}
+
+
