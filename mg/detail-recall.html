@@ -30,8 +30,8 @@
 		<meta name="theme-color" content="#ffffff">
 	<!-- FAVICON -->
 
-	<script type="text/javascript" src="../scripts/grit.js"></script>
-	<script type="text/javascript" src="../scripts/concentration.js"></script>
+	<!-- <script type="text/javascript" src="../scripts/grit.js"></script> -->
+	<!-- <script type="text/javascript" src="../scripts/concentration.js"></script> -->
 	<script type="text/javascript" src="../scripts/details.js"></script>
 </head>
 <body>
@@ -42,8 +42,8 @@
 
 	<div class="details__control-box">
 		<div class="details__level-box">
-			<input id="level-selector" class="details__level-selector" type="range" min="11" max="12" value="11">
-			<span id="level-count" class="details__level-count">11</span>
+			<input id="level-selector" class="details__level-selector" type="range" min="0" max="10" value="1">
+			<span id="level-count" class="details__level-count">1</span>
 		</div><!-- LEVEL SELECTOR -->
 		<div class="details__button-box">
 			<div id="lay-cards" class="details__button">
@@ -105,7 +105,37 @@
 <script type="text/javascript">
 	
 		const cardBox = document.getElementById("card-box");
+		currentLevel = 1;
 
+		// BUTTONS
+
+			// let setLevel = 
+			const levelSelector = document.getElementById("level-selector");
+			const levelCount = document.getElementById("level-count");
+			const layCards = document.getElementById("lay-cards");
+			const hideAll = document.getElementById("hide-all");
+			const revealAll = document.getElementById("reveal-all");
+
+			// currentLevel = 1;
+
+			levelSelector.addEventListener('input', function() {
+				currentLevel = levelSelector.value
+				levelCount.innerText = currentLevel;
+				return(currentLevel);
+			})
+
+			layCards.addEventListener("click", function(){
+				let chosenLevel = levels[currentLevel];
+				fillBox(chosenLevel,cardBox);
+			});
+
+			hideAll.addEventListener("click", function() {
+				hideCards();
+			});
+
+			revealAll.addEventListener("click", function() {
+				revealCards();
+			});
 
 
 </script>

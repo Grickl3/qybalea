@@ -68,7 +68,7 @@
 	flex-wrap: wrap;
 	max-width: 80vw;
 	padding: 1rem;
-	border: 1px solid gold;
+	/*border: 1px solid #344966;*/
 }
 
 .details__card {
@@ -91,7 +91,7 @@
 	}
 
 .details__card-copy {
-	font-family: 'Six Caps', Helvetica, sans-serif; 
+	font-family: Helvetica, sans-serif; 
 	font-size: 3rem;
 	font-weight: 500;
 	letter-spacing: .2rem;
