@@ -7,19 +7,27 @@ const testJSconnection = function() {
 
 	// BASIC SETS
 
+		// ASSETS
+
+			const blueCircle = document.createElement("img");
+				blueCircle.setAttribute('src','../img/blue-circle.svg');
+
+			// const redSquare = document.createElement("img");
+				// redSquare.setAttribute('src','./img/red-square.svg');
+
 		// LEVEL 11 — NUMERALS AND WORDS 1
 
-			const level0 = ["1", "2", "3", "4", "one", "two", "three", "four", "five"];
-			const level1 = ["1", "2", "3", "4", "5", "6", "7", "8", "one", "two", "three", "four", "five", "six", "seven", "eight"];
-			const level2 = ["1", "2", "3", "4", "5", "6", "7", "8", "one", "two", "three", "four", "five", "six", "seven", "eight"];
-			const level3 = ["this", "is", "level", "three", "level3 biatch!"];
-			const level4 = ["welcome", "2", "lvl.", "4"];
-			const level5 = ["five", "5", "V", "pente", "go", "tanu", "cinco"];
-			const level6 = ["6", "roku", "sita", "tif’feret", "hexa"];
-			const level7 = ["seven", "7", "venus", "shichi", "netsirah", "the Virgin"];
-			const level8 = ["hvn & earth", "eight", "8", "oct"];
-			const level9 = ["nine", "yesod", "nane", "kyu", "9"];
-			const level10 = ["10", "X", "ju", "the Wheel", "Malkuth"];
+			const level0 = [ "1", "2", "1", "2", "1", "2", "1", "2"];
+			const level1 = ["1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3",];
+			const level2 = [ "1", "2", "3", "4", "one", "two", "three", "four"];
+			const level3 = ["dog", "cat", "dog", "cat", "dog", "cat","dog", "cat"];
+			const level4 = ["1", "2", "3", "4", "5", "6", "7", "8", "one", "two", "three", "four", "five", "six", "seven", "eight"];
+			const level5 = ["dog", "cat", "dog", "cat", "dog", "cat","dog", "cat", "1", "2", "3", "4", "one", "two", "three", "four"];
+			const level6 = ["4 legs", "dog", "1", "2", "3","one", "two", "three", "walk", "amble", "0", "zero"];
+			const level7 = ["seven", "7", "4 legs", "dog", "1", "2", "3","one", "two", "three", "walk", "amble", "0", "zero", "four", "five", "4", "5", "six", "6"];
+			const level8 = ["seven", "7", "4 legs", "dog", "1", "2", "3","one", "two", "three", "walk", "amble", "0", "zero", "four", "five", "4", "5", "six", "6", "red", "red", "blue", "blue"];
+			const level9 = ["seven", "7", "4 legs", "dog", "1", "2", "3","one", "two", "three", "walk", "amble", "0", "zero", "four", "five", "4", "5", "six", "6", "red", "red", "blue", "blue"];
+			const level10 = ["seven", "7", "4 legs", "dog", "1", "2", "3","one", "two", "three", "walk", "amble", "0", "zero", "four", "five", "4", "5", "six", "6", "red", "red", "blue", "blue"];
 			// const level11 = ["1", "2", "3", "4", "5", "6", "7", "8", "one", "two", "three", "four", "five", "six", "seven", "eight"]
 			// const level12 = ["1", "2", "3", "4", "5", "6", "7", "8", "one", "two", "three", "four", "five", "six", "seven", "eight"]
 			// const level13 = ["1", "2", "3", "4", "5", "6", "7", "8", "one", "two", "three", "four", "five", "six", "seven", "eight"]
@@ -70,22 +78,6 @@ const testJSconnection = function() {
 		for (var i = 0; i < shuffledDeck.length; i++) {
 			box.appendChild(shuffledDeck[i]);
 		}
-
-		// let cardsOnTable = document.querySelectorAll(".details__card");
-		// let cardFaces = [];
-		
-		// for (var i = 0; i < cardsOnTable.length; i++) {
-		// 	let face = cardsOnTable[i].firstChild;
-		// 	cardFaces.push(face);
-		// }
-
-		// for (var i = 0; i < cardsOnTable.length; i++) {
-		// 	cardsOnTable[i].addEventListener("click", function() {
-		// 		cardFaces[i].classList.toggle("layout__hidden");
-		// 	});
-		// }
-
-
 
 		// console.log(shuffledDeck);
 	}

@@ -53,47 +53,106 @@
 			color: #0d1821;
 		}
 
-
-.details__stage {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 5rem 0;
-}
-
-.details__card-box {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	max-width: 80vw;
-	padding: 1rem;
-	/*border: 1px solid #344966;*/
-}
-
-.details__card {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	margin: 1rem;
-	padding: 2rem;
-	min-width: 9rem;
-	min-height: 9rem;
-
-	background-color: #344966;
-	border-radius: 2rem;
-	border: 2px solid #b4cded;
-}
-	.details__card:hover {
-		background-color: #b4cded;
-		cursor: pointer;
+/* STAGE */
+	.details__stage {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 5rem 0;
 	}
 
-.details__card-copy {
-	font-family: Helvetica, sans-serif; 
-	font-size: 3rem;
-	font-weight: 500;
-	letter-spacing: .2rem;
-	color: #f0f4ef;
+	.details__stage-grid {}
+
+	.details__grid-top {
+		display: flex;
+		flex-direction: row;
+		overflow-x: hidden;
+	}
+
+	.detials__top-cell {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin: 1.2rem;
+		padding: 2rem;
+		min-width: 9rem;
+		/*min-height: 9rem;*/
+	}
+
+	.details__cell-copy {
+		font-family: Helvetica, sans-serif; 
+		font-size: 3rem;
+		font-weight: 500;
+		color: #f0f4ef;
+	}
+
+	.details__lower-grid {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.details__grid-side {}
+
+	.detials__side-cell {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin: 2rem;
+		padding: 2rem;
+		/*min-width: 9rem;*/
+		min-height: 9rem;
+	}
+
+
+/* CARD BOX */
+	.details__card-box {
+		display: flex;
+		align-items: center;
+		/*justify-content: center;*/
+		flex-wrap: wrap;
+		max-width: 80vw;
+		padding: 1rem;
+		/*border: 1px solid #344966;*/
+	}
+
+	.details__card {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin: 1rem;
+		padding: 2rem;
+		min-width: 9rem;
+		min-height: 9rem;
+
+		background-color: #344966;
+		border-radius: 2rem;
+		border: 2px solid #b4cded;
+	}
+		.details__card:hover {
+			background-color: #b4cded;
+			cursor: pointer;
+		}
+
+	.details__card-copy {
+		font-family: Helvetica, sans-serif; 
+		font-size: 3rem;
+		font-weight: 500;
+		letter-spacing: .2rem;
+		color: #f0f4ef;
+	}
+
+
+.details__hidden {
+	opacity: 0;
 }
+
+
+
+
+
+
+
+

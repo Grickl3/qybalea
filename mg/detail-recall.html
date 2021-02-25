@@ -60,43 +60,88 @@
 
 	<div class="details__stage">
 		
-		<div id="card-box" class="details__card-box">
-			<!-- <div id="card-1" class="details__card">
-				<span class="details__card-copy">1</span>
-			</div> --><!-- CARD -->
+		<div class="details__stage-grid">
+			<div id="grid-top" class="details__grid-top details__hidden">
+				<div class="detials__side-cell">
+					<!-- <span class="details__cell-copy">0</span> -->
+				</div><!-- CELL -->
+				<div class="detials__top-cell">
+					<span class="details__cell-copy">1</span>
+				</div><!-- CELL -->
+				<div class="detials__top-cell">
+					<span class="details__cell-copy">2</span>
+				</div><!-- CELL -->
+				<div class="detials__top-cell">
+					<span class="details__cell-copy">3</span>
+				</div><!-- CELL -->
+				<div class="detials__top-cell">
+					<span class="details__cell-copy">4</span>
+				</div><!-- CELL -->
+				<div class="detials__top-cell">
+					<span class="details__cell-copy">5</span>
+				</div><!-- CELL -->
+				<div class="detials__top-cell">
+					<span class="details__cell-copy">6</span>
+				</div><!-- CELL -->
+			</div><!-- GRID TOP -->
 
-			<!-- <div id="card-2" class="details__card">
-				<span class="details__card-copy">2</span>
-			</div> --><!-- CARD -->
+			<div id="grid-bottom" class="details__lower-grid details__hidden">
+				<div class="details__grid-side">
+					<!-- <div class="detials__side-cell"></div> -->
+					<div class="detials__side-cell">
+						<span class="details__cell-copy">A</span>
+					</div><!-- CELL -->
+					<div class="detials__side-cell">
+						<span class="details__cell-copy">B</span>
+					</div><!-- CELL -->
+					<div class="detials__side-cell">
+						<span class="details__cell-copy">C</span>
+					</div><!-- CELL -->
+					<div class="detials__side-cell">
+						<span class="details__cell-copy">D</span>
+					</div><!-- CELL -->
+				</div><!-- GRID SIDE -->
 
-			<!-- <div id="card-3" class="details__card">
-				<span class="details__card-copy">3</span>
-			</div> --><!-- CARD -->
+				<div id="card-box" class="details__card-box">
+					<!-- <div id="card-1" class="details__card">
+						<span class="details__card-copy">1</span>
+					</div> --><!-- CARD -->
 
-			<!-- <div id="card-4" class="details__card">
-				<span class="details__card-copy">4</span>
-			</div> --><!-- CARD -->
+					<!-- <div id="card-2" class="details__card">
+						<span class="details__card-copy">2</span>
+					</div> --><!-- CARD -->
 
-			<!-- <div id="card-5" class="details__card">
-				<span class="details__card-copy">ONE</span>
-			</div> --><!-- CARD -->
+					<!-- <div id="card-3" class="details__card">
+						<span class="details__card-copy">3</span>
+					</div> --><!-- CARD -->
 
-			<!-- <div id="card-6" class="details__card">
-				<span class="details__card-copy">TWO</span>
-			</div> --><!-- CARD -->
+					<!-- <div id="card-4" class="details__card">
+						<span class="details__card-copy">4</span>
+					</div> --><!-- CARD -->
 
-			<!-- <div id="card-7" class="details__card">
-				<span class="details__card-copy">THREE</span>
-			</div> --><!-- CARD -->
+					<!-- <div id="card-5" class="details__card">
+						<span class="details__card-copy">ONE</span>
+					</div> --><!-- CARD -->
 
-			<!-- <div id="card-8" class="details__card">
-				<span class="details__card-copy">FOUR</span>
-			</div> --><!-- CARD -->
+					<!-- <div id="card-6" class="details__card">
+						<span class="details__card-copy">TWO</span>
+					</div> --><!-- CARD -->
 
-			<!-- <div id="card-9" class="details__card">
-				<span class="details__card-copy">FIVE</span>
-			</div> --><!-- CARD -->
-		</div><!-- CARDS -->
+					<!-- <div id="card-7" class="details__card">
+						<span class="details__card-copy">THREE</span>
+					</div> --><!-- CARD -->
+
+					<!-- <div id="card-8" class="details__card">
+						<span class="details__card-copy">FOUR</span>
+					</div> --><!-- CARD -->
+
+					<!-- <div id="card-9" class="details__card">
+						<span class="details__card-copy">FIVE</span>
+					</div> --><!-- CARD -->
+				</div><!-- CARDS -->
+			</div><!-- LOWER GRID -->
+
+		</div><!-- STAGE GRID -->
 
 	</div><!-- STAGE -->
 
@@ -115,8 +160,11 @@
 			const layCards = document.getElementById("lay-cards");
 			const hideAll = document.getElementById("hide-all");
 			const revealAll = document.getElementById("reveal-all");
+			const gridTop = document.getElementById("grid-top");
+			const gridBottom = document.getElementById("grid-bottom");
 
 			// currentLevel = 1;
+			// document.appendChild(blueCircle);
 
 			levelSelector.addEventListener('input', function() {
 				currentLevel = levelSelector.value
@@ -127,6 +175,8 @@
 			layCards.addEventListener("click", function(){
 				let chosenLevel = levels[currentLevel];
 				fillBox(chosenLevel,cardBox);
+				gridTop.classList.remove("details__hidden");
+				gridBottom.classList.remove("details__hidden");
 			});
 
 			hideAll.addEventListener("click", function() {
