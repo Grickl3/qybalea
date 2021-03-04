@@ -144,6 +144,14 @@
 		color: #f0f4ef;
 	}
 
+.details__lvl11__storage {}
+
+.details__lvl11__1 {
+	height: 2rem;
+	width: 2rem;
+	background-color: gold;
+}
+
 
 .details__hidden {
 	opacity: 0;

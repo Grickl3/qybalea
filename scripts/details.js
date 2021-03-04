@@ -1,21 +1,13 @@
 
 const testJSconnection = function() {
 	console.log("detailsJS connected.");
-};
+}; 
 
 // DECKS
 
 	// BASIC SETS
 
-		// ASSETS
-
-			const blueCircle = document.createElement("img");
-				blueCircle.setAttribute('src','../img/blue-circle.svg');
-
-			// const redSquare = document.createElement("img");
-				// redSquare.setAttribute('src','./img/red-square.svg');
-
-		// LEVEL 11 — NUMERALS AND WORDS 1
+		// LEVELS
 
 			const level0 = [ "1", "2", "1", "2", "1", "2", "1", "2"];
 			const level1 = ["1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3", "1", "2", "3",];
@@ -28,7 +20,10 @@ const testJSconnection = function() {
 			const level8 = ["seven", "7", "4 legs", "dog", "1", "2", "3","one", "two", "three", "walk", "amble", "0", "zero", "four", "five", "4", "5", "six", "6", "red", "red", "blue", "blue"];
 			const level9 = ["seven", "7", "4 legs", "dog", "1", "2", "3","one", "two", "three", "walk", "amble", "0", "zero", "four", "five", "4", "5", "six", "6", "red", "red", "blue", "blue"];
 			const level10 = ["seven", "7", "4 legs", "dog", "1", "2", "3","one", "two", "three", "walk", "amble", "0", "zero", "four", "five", "4", "5", "six", "6", "red", "red", "blue", "blue"];
-			// const level11 = ["1", "2", "3", "4", "5", "6", "7", "8", "one", "two", "three", "four", "five", "six", "seven", "eight"]
+			const level11 = [
+				"½", "⅛", "⅒", "⅕", "⅞", "⅘", "C", "L", ".5", ".125", ".1", ".2", ".875", ".8", "100", "50", "X", "10", "IX", "9"]
+			const level12 = [
+				"Incredible", "Astonishing", "Infuriate","Enrage","Reply", "Respond", "Inquire", "Query", "Abominable", "Dreadful", "Rotten","Contaminated", "Dazzling", "Splendid	"]
 			// const level12 = ["1", "2", "3", "4", "5", "6", "7", "8", "one", "two", "three", "four", "five", "six", "seven", "eight"]
 			// const level13 = ["1", "2", "3", "4", "5", "6", "7", "8", "one", "two", "three", "four", "five", "six", "seven", "eight"]
 			// const level14 = ["1", "2", "3", "4", "5", "6", "7", "8", "one", "two", "three", "four", "five", "six", "seven", "eight"]
@@ -39,7 +34,7 @@ const testJSconnection = function() {
 			// const level19 = ["1", "2", "3", "4", "5", "6", "7", "8", "one", "two", "three", "four", "five", "six", "seven", "eight"]
 			// const level20 = ["1", "2", "3", "4", "5", "6", "7", "8", "one", "two", "three", "four", "five", "six", "seven", "eight"]
 
-			const levels = [level0, level1, level2, level3,level4, level5, level6, level7, level8, level9, level10];
+			const levels = [level0, level1, level2, level3,level4, level5, level6, level7, level8, level9, level10, level11, level12];
 
 // WRITE DECK MARKUP
 
